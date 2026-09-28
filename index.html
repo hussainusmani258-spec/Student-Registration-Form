@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            background-color: #121212;
+            font-family: 'Times New Roman', Times, serif;
+           
+            align-items: center;
+           
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: #ffebe8;
+            padding: 30px 40px;
+            border-radius: 8px;
+            
+            width: 700px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 24px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+         
+            border-spacing: 0 12px;
+        }
+
+        td.label {
+            width: 35%;
+            font-size: 15px;
+            
+            
+        }
+
+        td.field {
+            width: 65%;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 5px 8px;
+            border: 1px solid #a6a6a6;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        .inline-inputs {
+          
+            align-items: center;
+            gap: 5px;
+        }
+
+        .inline-inputs input[type="text"] {
+            width: auto;
+            flex: 1;
+        }
+
+        .date-inputs input {
+            width: 50px !important;
+            text-align: center;
+        }
+
+        .phone-prefix {
+            width: 45px !important;
+            text-align: center;
+        }
+
+        .hint-text {
+            font-style: italic;
+            font-size: 13px;
+            color: #333;
+            margin-left: 6px;
+        }
+
+        .options-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            
+        }
+
+        .options-group label {
+
+            align-items: center;
+           
+          
+        }
+
+        textarea {
+            
+            height: 70px;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .submit-btn {
+            background-color: #e1e1e1;
+            border: 1px solid #767676;
+            padding: 4px 15px;
+            font-size: 13px;
+            cursor: pointer;
+            border-radius: 3px;
+            color: #000;
+        }
+
+        .submit-btn:hover {
+            background-color: #d0d0d0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Student Registration Form</h2>
+
+        <form action="#" method="POST">
+            <table>
+                <tr>
+                    <td class="label">Roll no. :</td>
+                    <td class="field">
+                        <input type="text" name="roll_no" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Student name :</td>
+                    <td class="field">
+                        <div class="inline-inputs">
+                            <input type="text" name="first_name" placeholder="First Name">
+                            <span>-</span>
+                            <input type="text" name="last_name" placeholder="Last Name">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Father's name :</td>
+                    <td class="field">
+                        <input type="text" name="father_name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Date of birth :</td>
+                    <td class="field">
+                        <div class="inline-inputs date-inputs">
+                            <input type="text" name="dob_day" placeholder="Day" maxlength="2">
+                            <span>-</span>
+                            <input type="text" name="dob_month" placeholder="Month" maxlength="2">
+                            <span>-</span>
+                            <input type="text" name="dob_year" placeholder="Year" maxlength="4">
+                            <span class="hint-text">(DD-MM-YYYY)</span>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Mobile no. :</td>
+                    <td class="field">
+                        <div class="inline-inputs">
+                            <input type="text" value="+91" class="phone-prefix" readonly>
+                            <span>-</span>
+                            <input type="text" name="mobile_no" style="flex: 1;">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Email id :</td>
+                    <td class="field">
+                        <input type="email" name="email">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Password :</td>
+                    <td class="field">
+                        <input type="password" name="password">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Gender :</td>
+                    <td class="field">
+                        <div class="options-group">
+                            <label><input type="radio" name="gender" value="Male"> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Department :</td>
+                    <td class="field">
+                        <div class="options-group">
+                            <label><input type="checkbox" name="dept[]" value="CSE"> CSE</label>
+                            <label><input type="checkbox" name="dept[]" value="IT"> IT</label>
+                            <label><input type="checkbox" name="dept[]" value="ECE"> ECE</label>
+                            <label><input type="checkbox" name="dept[]" value="Civil"> Civil</label>
+                            <label><input type="checkbox" name="dept[]" value="Mech"> Mech</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Course :</td>
+                    <td class="field">
+                        <select name="course">
+                            <option value="">------------------- Select Current Course's -------------------</option>
+                            <option value="web_dev">Web Development</option>
+                            <option value="app_dev">App Development</option>
+                            <option value="graphic_design">Graphic Design</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Student photo :</td>
+                    <td class="field">
+                        <input type="file" name="student_photo">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">City :</td>
+                    <td class="field">
+                        <input type="text" name="city">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Address :</td>
+                    <td class="field">
+                        <textarea name="address"></textarea>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="btn-container">
+                <button type="submit" class="submit-btn">Register</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
