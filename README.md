@@ -14,4 +14,4 @@ A clean, structured, and responsive Student Registration Form designed with cust
 ## 🚀 How to Run
 1. Clone this repository:
    ```bash
- (https://hussainusmani258-spec.github.io/Student-Registration-Form/)
+Live Demo: [https://hussainusmani258-spec.github.io/Student-Registration-Form/](https://hussainusmani258-spec.github.io/Student-Registration-Form/)
